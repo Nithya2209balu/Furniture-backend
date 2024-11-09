@@ -11,6 +11,10 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Hello World');
+    });
+
 // MongoDB URI from environment variable
 const uri = process.env.MONGODB_URI;
 
